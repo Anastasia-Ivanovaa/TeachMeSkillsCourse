@@ -1,7 +1,5 @@
 package Lesson_4;
 
-
-
 public class TaskTwo {
     public static void main(String[] args) {
         // Задача 2. Шахматная доска
