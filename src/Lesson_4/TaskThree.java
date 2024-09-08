@@ -1,5 +1,6 @@
 package Lesson_4;
 
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,6 +24,13 @@ public class TaskThree {
         for (int i = 0; i < number; i++) {
             for (int j = 0; j < number; j++) {
                 array[i][j] = random.nextInt(-100, 100);
+            }
+        }
+
+        System.out.println("Created array: ");
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
@@ -40,9 +48,11 @@ public class TaskThree {
                 }
             }
         }
+
         int generalSum = sumOfMainDiagonal + sumOfExtraDiagonal;
-        System.out.println("The sum of main diagonal " + sumOfMainDiagonal);
-        System.out.println("The sum of extra diagonal " + sumOfExtraDiagonal);
+
+        System.out.println("The sum of main diagonal " + sumOfMainDiagonal + ".");
+        System.out.println("The sum of extra diagonal " + sumOfExtraDiagonal + ".");
         System.out.println("The sum of two diagonals are " + generalSum + ".");
         scanner.close();
     }

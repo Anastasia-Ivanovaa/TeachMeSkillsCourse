@@ -1,5 +1,7 @@
 package Lesson_4;
 
+
+
 public class TaskTwo {
     public static void main(String[] args) {
         // Задача 2. Шахматная доска
@@ -24,10 +26,14 @@ public class TaskTwo {
                 } else {
                     chessboard[i][j] = black;
                 }
+            }
+        }
+
+        for (int i = 0; i < chessboard.length; i++) {
+            System.out.println();
+            for (int j = 0; j < chessboard[i].length; j++) {
                 System.out.print(chessboard[i][j] + " ");
             }
-            System.out.println();
-
         }
     }
 }

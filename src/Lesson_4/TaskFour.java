@@ -26,6 +26,11 @@ public class TaskFour {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 array[i][j] = random.nextInt(-100, 100);
+            }
+        }
+
+        for (int i =0; i < array.length; i++){
+            for (int j = 0; j < array[i].length; j++){
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
@@ -34,10 +39,11 @@ public class TaskFour {
         for (int i = 0; i < array.length; i++) {
             Arrays.sort(array[i]);
         }
+
         System.out.println("Sorted array: ");
-        for (int row = 0; row < array.length; row++) {
-            for (int column = 0; column < array[row].length; column++) {
-                System.out.print(array[row][column] + " ");
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
