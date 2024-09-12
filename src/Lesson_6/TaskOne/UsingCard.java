@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class UsingCard {
     public static void main(String[] args) {
 
-        CreditCard cardOne = new CreditCard();
-        cardOne.id = 1;
-        cardOne.accountNumber = "4111111111";
-        cardOne.currentAccountAmount = 1000;
+        CreditCard cardOne = new CreditCard(1, "4111111111111111");
+        CreditCard cardTwo = new CreditCard(2,"41111111111111112");
+        CreditCard cardThree = new CreditCard(3, "4111111111111113");
+        cardOne.printCardInfo();
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter amount You want to replenish your account:");
@@ -18,6 +19,11 @@ public class UsingCard {
         System.out.println("Enter amount You want to withdraw: ");
         double amountWithdraw = scanner.nextDouble();
         cardOne.withdrawAmount(amountWithdraw);
+
+        cardOne.printCardInfo();
+        cardTwo.printCardInfo();
+        cardThree.printCardInfo();
+
         scanner.close();
     }
 }
