@@ -5,20 +5,32 @@ import java.util.Scanner;
 public class UsingCard {
     public static void main(String[] args) {
 
-        CreditCard cardOne = new CreditCard(1, "4111111111111111");
-        CreditCard cardTwo = new CreditCard(2,"41111111111111112");
-        CreditCard cardThree = new CreditCard(3, "4111111111111113");
-        cardOne.printCardInfo();
-
-
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter amount You want to replenish your account:");
-        double amountAdd = scanner.nextDouble();
-        cardOne.creditOfFunds(amountAdd);
 
-        System.out.println("Enter amount You want to withdraw: ");
-        double amountWithdraw = scanner.nextDouble();
-        cardOne.withdrawAmount(amountWithdraw);
+        CreditCard cardOne = new CreditCard(1, "4111111111111111");
+        System.out.println("Enter the amount on card one: ");
+
+        cardOne.setCurrentAccountAmount(scanner.nextDouble());
+
+        CreditCard cardTwo = new CreditCard(2, "41111111111111112");
+        System.out.println("Enter the amount on card two: ");
+
+        cardTwo.setCurrentAccountAmount(scanner.nextDouble());
+
+        CreditCard cardThree = new CreditCard(3, "4111111111111113");
+        System.out.println("Enter the amount on card three: ");
+
+        cardThree.setCurrentAccountAmount(scanner.nextDouble());
+
+
+        System.out.println("Enter amount You want to put on card one:");
+        cardOne.creditOfFunds(scanner.nextDouble());
+
+        System.out.println("Enter amount You want to put on card two:");
+        cardTwo.creditOfFunds(scanner.nextDouble());
+
+        System.out.println("Enter amount You want to take from  card three: ");
+        cardThree.withdrawAmount(scanner.nextDouble());
 
         cardOne.printCardInfo();
         cardTwo.printCardInfo();
