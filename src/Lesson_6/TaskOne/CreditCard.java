@@ -1,9 +1,8 @@
 package Lesson_6.TaskOne;
 
-import java.util.Scanner;
 
 public class CreditCard {
-    private long id;
+    private final long id;
     private String accountNumber;
     private double currentAccountAmount;
 
@@ -20,19 +19,15 @@ public class CreditCard {
         this.accountNumber = accountNumber;
     }
 
-
     public void creditOfFunds(double NewAmount) {
         currentAccountAmount += NewAmount;
-        System.out.println("Your new amount is " + currentAccountAmount);
     }
 
     public void withdrawAmount(double amount) {
         currentAccountAmount -= amount;
-        System.out.println("Your new amount is " + currentAccountAmount);
     }
 
     public void printCardInfo() {
-        System.out.println("Card number: " + accountNumber + "," + "Current Account Amount: " + currentAccountAmount);
     }
 
 }
