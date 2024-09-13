@@ -7,16 +7,12 @@ public class CreditCard {
     private String accountNumber;
     private double currentAccountAmount;
 
-
-
-     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the current amount on Your card: ");
-        this.currentAccountAmount = scanner.nextDouble();
+    public void setCurrentAccountAmount(double currentAccountAmount) {
         if (currentAccountAmount < 0) {
             System.out.println("The amount must be more than 0. Please try again.");
             return;
         }
+        this.currentAccountAmount = currentAccountAmount;
     }
 
     public CreditCard(long id, String accountNumber) {
