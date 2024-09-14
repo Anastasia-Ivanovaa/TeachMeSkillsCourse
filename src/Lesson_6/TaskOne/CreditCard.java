@@ -28,6 +28,7 @@ public class CreditCard {
     }
 
     public void printCardInfo() {
+        System.out.println("Card number: " + accountNumber + ", " + "amount on card: " + currentAccountAmount);
     }
 
 }

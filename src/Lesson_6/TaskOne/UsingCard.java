@@ -12,7 +12,7 @@ public class UsingCard {
 
         cardOne.setCurrentAccountAmount(scanner.nextDouble());
 
-        CreditCard cardTwo = new CreditCard(2, "41111111111111112");
+        CreditCard cardTwo = new CreditCard(2, "4111111111111112");
         System.out.println("Enter the amount on card two: ");
 
         cardTwo.setCurrentAccountAmount(scanner.nextDouble());
@@ -22,14 +22,13 @@ public class UsingCard {
 
         cardThree.setCurrentAccountAmount(scanner.nextDouble());
 
-
         System.out.println("Enter amount You want to put on card one:");
         cardOne.creditOfFunds(scanner.nextDouble());
 
         System.out.println("Enter amount You want to put on card two:");
         cardTwo.creditOfFunds(scanner.nextDouble());
 
-        System.out.println("Enter amount You want to take from  card three: ");
+        System.out.println("Enter amount You want to take from card three: ");
         cardThree.withdrawAmount(scanner.nextDouble());
 
         cardOne.printCardInfo();
