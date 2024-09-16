@@ -16,6 +16,6 @@ public class ProgrammCheck {
 
         Computer computerTwo = new Computer(2000, "Macbook Pro 16 M2 Pro", ram, hdd);
 
-        computerTwo.printInfo2();
+        computerTwo.printInfo1();
     }
 }
