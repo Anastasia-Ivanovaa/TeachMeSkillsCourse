@@ -3,13 +3,12 @@ package Lesson_6.extraTaskOne;
 public class Computer {
     private double price;
     private String model;
-    private RAM RAM;
-    private HDD HDD;
-
+    private RAM ram;
+    private HDD hdd;
 
     public Computer() {
-        RAM = new RAM("ram", 256);
-        HDD = new HDD("hdd", 156, "внешний");
+        ram = new RAM("ram", 256);
+        hdd = new HDD("hdd", 156, "внешний");
     }
 
     public Computer(double price, String model) {
@@ -19,15 +18,18 @@ public class Computer {
 
     public Computer(double price, String model, RAM RAM, HDD HDD) {
         this(price, model);
-        this.RAM = RAM;
-        this.HDD = HDD;
+        this.ram = RAM;
+        this.hdd = HDD;
     }
 
     public void printInfo1() {
-        System.out.println("Computer model: " + model + "\n " + "Price: " + price + "$" + "\n");
+        String str = "Computer model: " + model + "\n " + "Price: " + price + "$";
+        if(ram != null) {
+            str += "\n" + ram.printInfoRAM();
+        }
+        if(hdd != null){
+            str += "\n" + hdd.printInfoHDD();
+        }
+        System.out.println(str);
     }
-
-    public void printInfo2() {
-        System.out.println("Computer model: " + model + " " + "Price: " + price + "$" + "\n" + RAM.printInfoRAM() + "\n" + HDD.printInfoHDD());
-    }
-}
+  }
