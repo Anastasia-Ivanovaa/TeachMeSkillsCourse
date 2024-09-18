@@ -1,9 +1,26 @@
 package Lesson_7.TaskTwo;
 
-public interface Bird {
+public abstract class Bird extends Animal implements Printable {
+    private double heightOfFlight;
 
-    default void fly() {
+    public Bird(String name, int age, double heightOfFlight) {
+        super(name, age);
+        this.heightOfFlight = heightOfFlight;
+    }
+
+    public void fly() {
         System.out.println("I can fly.");
     }
 
+    @Override
+    public void printInfo() {
+        System.out.println("My maximum height is " + heightOfFlight + ".");
+    }
+
+    @Override
+    public void live() {
+        printInfo();
+        super.live();
+        fly();
+    }
 }
