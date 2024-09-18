@@ -1,16 +1,13 @@
 package Lesson_7.TaskTwo;
 
-public class Raven extends Animal implements Bird {
-    private double maxHeightOfFlight;
+public class Raven extends Bird {
 
-    public Raven(String name, int age, double maxHeightOfFlight) {
-        super(name, age);
-        this.maxHeightOfFlight = maxHeightOfFlight;
+    public Raven(String name, int age, double heightOfFlight) {
+        super(name, age, heightOfFlight);
     }
 
     @Override
     public void live() {
         super.live();
-        fly();
     }
 }

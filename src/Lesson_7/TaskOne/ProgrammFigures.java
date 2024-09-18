@@ -20,7 +20,7 @@ public class ProgrammFigures {
             int figureLength = figure.getLength();
             sumOfLength += figureLength;
         }
-        System.out.println("The sum of all figures length is " +sumOfLength);
+        System.out.println("The sum of all figures length is " + sumOfLength);
     }
 
     private static Figure getRandomFigure() {
@@ -34,11 +34,9 @@ public class ProgrammFigures {
             return new Triangle(sideOne, sideTwo, sideThree);
         } else if (flag == 1) {
             return new Circle(radius);
-        } else if (flag == 2) {
+        } else {
             return new Rectangle(sideOne, sideTwo);
         }
-        return null;
     }
-
 }
 
