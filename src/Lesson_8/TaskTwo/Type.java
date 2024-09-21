@@ -14,6 +14,4 @@ public enum Type {
     Type(String letter) {
         this.letter = letter;
     }
-
-
 }

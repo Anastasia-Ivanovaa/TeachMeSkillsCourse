@@ -10,27 +10,27 @@ public class BaseConverter {
         convert(scanner.nextDouble(), Type.valueOf(scanner.next()));
     }
 
-    public static double convert(double value, Type type) {
+    public static String convert(double value, Type type) {
         switch (type) {
             case C -> {
-                double fahrenheit = Math.round(1.8 * value + 32);
-                double kelvin = Math.round(value + 273.15);
-                System.out.println(fahrenheit + " " + Type.F.getLetter() + "\n" + kelvin + " " + Type.K.getLetter());
+                double fahrenheit = 1.8 * value + 32;
+                double kelvin = value + 273.15;
+                String result = fahrenheit + " " + Type.F.getLetter() + "\n" + kelvin + " " + Type.K.getLetter();
+                return result;
             }
             case K -> {
-                double celsius = Math.round(value - 273.15);
-                double fahrenheit = Math.round(1.8 * celsius + 32);
-                System.out.println(celsius + " " + "C" + "\n" + fahrenheit + " " + "F");
+                double celsius = value - 273.15;
+                double fahrenheit = 1.8 * celsius + 32;
+                String result = celsius + " " + "C" + "\n" + fahrenheit + " " + "F";
+                return result;
             }
             case F -> {
-                double celsius = Math.round(value / 1.8 - 32);
-                double kelvin = Math.round(celsius + 273.15);
-                System.out.println(celsius + "C" + "\n" + kelvin + "K");
-            }
-            default -> {
-                return 0;
+                double celsius = value / 1.8 - 32;
+                double kelvin = celsius + 273.15;
+                String result = celsius + "C" + "\n" + kelvin + "K";
+                return result;
             }
         }
-        return value;
+        return "";
     }
 }
