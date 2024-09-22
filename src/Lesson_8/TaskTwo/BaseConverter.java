@@ -7,30 +7,30 @@ public class BaseConverter {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter temperature value (for example, 10 C): ");
-        convert(scanner.nextDouble(), Type.valueOf(scanner.next()));
+        String result = convert(scanner.nextDouble(), Type.valueOf(scanner.next()));
+        System.out.println(result);
     }
 
     public static String convert(double value, Type type) {
+        String result = "";
         switch (type) {
             case C -> {
                 double fahrenheit = 1.8 * value + 32;
                 double kelvin = value + 273.15;
-                String result = fahrenheit + " " + Type.F.getLetter() + "\n" + kelvin + " " + Type.K.getLetter();
-                return result;
+                result = fahrenheit + " " + Type.F.name() + "\n" + kelvin + " " + Type.K.name();
             }
             case K -> {
                 double celsius = value - 273.15;
                 double fahrenheit = 1.8 * celsius + 32;
-                String result = celsius + " " + "C" + "\n" + fahrenheit + " " + "F";
-                return result;
+                result = celsius + " " + Type.C.name() + "\n" + fahrenheit + " " + Type.F.name();
+
             }
             case F -> {
                 double celsius = value / 1.8 - 32;
                 double kelvin = celsius + 273.15;
-                String result = celsius + "C" + "\n" + kelvin + "K";
-                return result;
+                result = celsius + Type.C.name() + "\n" + kelvin + Type.K.name();
             }
         }
-        return "";
+        return result;
     }
 }
