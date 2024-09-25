@@ -35,5 +35,4 @@ public class Dog extends Animal implements Saying, Printable {
         walk();
         say();
     }
-
 }

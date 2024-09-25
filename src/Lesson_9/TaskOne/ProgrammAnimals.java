@@ -1,8 +1,5 @@
 package Lesson_9.TaskOne;
 
-import Lesson_8.TaskTwo.Type;
-import Lesson_9.TaskTwo.WrongLoginException;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -27,7 +24,6 @@ public class ProgrammAnimals {
         System.out.println("Parrot can EAT, FLY");
         System.out.println("Raven can EAT, FLY");
 
-
         while (true) {
 
             System.out.println("Select the action for animals: ");
@@ -45,9 +41,7 @@ public class ProgrammAnimals {
             } else {
                 proccessArray(animals, action);
             }
-
         }
-
     }
 
     private static Animal getRandomAnimal() {
@@ -77,7 +71,7 @@ public class ProgrammAnimals {
                     try {
                         ((Saying) animal).say();
                     } catch (Exception e) {
-                        System.out.println(animal.getName() + " doesn't say.");
+                        System.out.println(animal.getName() + " can't say.");
                     }
                 }
             }
@@ -86,7 +80,7 @@ public class ProgrammAnimals {
                     try {
                         ((Dog) animal).walk();
                     } catch (Exception e) {
-                        System.out.println(animal.getName() + " doesn't walk.");
+                        System.out.println(animal.getName() + " cannot be walked.");
                     }
                 }
             }
@@ -95,7 +89,7 @@ public class ProgrammAnimals {
                     try {
                         ((Fish) animal).swim();
                     } catch (Exception e) {
-                        System.out.println(animal.getName() + " doesn't swim.");
+                        System.out.println(animal.getName() + " can't swim.");
                     }
                 }
             }
@@ -104,11 +98,10 @@ public class ProgrammAnimals {
                     try {
                         ((Bird) animal).fly();
                     } catch (Exception e) {
-                        System.out.println(animal.getName() + " doesn't fly.");
+                        System.out.println(animal.getName() + " can't fly.");
                     }
                 }
             }
-
         }
     }
 }

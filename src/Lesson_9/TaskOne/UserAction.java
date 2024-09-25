@@ -1,11 +1,11 @@
 package Lesson_9.TaskOne;
 
 public enum UserAction {
-    EAT(1, "All animals can EAT."),
-    SAY(2, "Cat, Dog and Parrot can SAY."),
-    WALK(3, "Dog can be WALKED"),
-    SWIM(4, "Fish can SWIM."),
-    FLY(5, "Raven and Parrot can FLY."),
+    EAT(1, "EAT"),
+    SAY(2, "SAY"),
+    WALK(3, "WALK"),
+    SWIM(4, "SWIM"),
+    FLY(5, "FLY"),
     EXIT(6,"Finish");
 
     private final int code;
