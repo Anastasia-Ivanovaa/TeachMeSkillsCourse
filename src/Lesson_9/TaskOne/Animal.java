@@ -16,6 +16,10 @@ public abstract class Animal {
         this.age = age;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public abstract AnimalType getAnimalType();
 
     public void eat() {
