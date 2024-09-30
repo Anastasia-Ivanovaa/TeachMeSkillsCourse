@@ -13,7 +13,7 @@ public class extraTwo {
         String[] wordsArray = enteredString.split(" ");
 
         int count = 0;
-        int Index = 0;
+        int index = 0;
         for (int i = 0; i < wordsArray.length; i++) {
             char[] elements = new char[wordsArray[i].length()];
             wordsArray[i].getChars(0, wordsArray[i].length(), elements, 0);
@@ -30,11 +30,11 @@ public class extraTwo {
 
             if(elementCounter > count) {
                 count = elementCounter;
-                Index = i;
+                index = i;
             }
         }
 
-        System.out.println(wordsArray[Index]);
+        System.out.println(wordsArray[index]);
     }
 }
 
