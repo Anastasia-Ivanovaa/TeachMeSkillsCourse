@@ -25,7 +25,7 @@ public class Document {
     }
 
     public boolean documentNumberValidation() {
-        if (documentNumber.length() == 15 && documentNumber.startsWith("AB100")) {
+        if (documentNumber.length() == 15 && documentNumber.startsWith("docnum")) {
             if (documentNumber.contains(" ")) {
                 errorMessage = "The document number must NOT contain spaces.";
             }
